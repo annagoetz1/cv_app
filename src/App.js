@@ -58,39 +58,66 @@ function App() {
             <option value="other">Other</option>
           </select>
 
-    <legend>Work Experience</legend>
+          <legend>Work Experience</legend>
 
-    <label for="company">Company Name:</label>
-    <input type="text" id="company" name="company" required />
-
-    <br />
-
-    <label for="position">Position Title:</label>
-    <input type="text" id="position" name="position" required />
-
-    <br />
-
-    <label for="responsibilities">Main Responsibilities:</label>
-    <textarea id="responsibilities" name="responsibilities" rows="4" required></textarea>
+        <label htmlFor="company">Company Name:</label>
+        <input
+        type="text"
+          id="company"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+          required
+        />
 
     <br />
 
-    <label for="startDate">Start Date:</label>
-    <input type="date" id="startDate" name="start_date" required />
+    
+    <label htmlFor="position">Position Title:</label>
+            <input
+              type="text"
+              id="position"
+              value={position}
+              onChange={(e) => setPosition(e.target.value)}
+              required
+            />
 
     <br />
 
-    <label for="endDate">End Date:</label>
-    <input type="date" id="endDate" name="end_date" />
+      <label htmlFor="responsibilities">Main Responsibilities:</label>
+            <textarea
+              id="responsibilities"
+              value={responsibilities}
+              onChange={(e) => setResponsibilities(e.target.value)}
+              rows="4"
+              required
+            ></textarea>
+    <br />
+
+    <label htmlFor="startDate">Start Date:</label>
+            <input
+              type="date"
+              id="startDate"
+              value={startDate}
+              onChange={(e) => setStartDate(e.target.value)}
+              required
+            />
+
+    <br />
+
+     <label htmlFor="endDate">End Date:</label>
+            <input
+              type="date"
+              id="endDate"
+              value={endDate}
+              onChange={(e) => setEndDate(e.target.value)}
+            />
   
   <br />
 
   <button type="submit">Send</button>
 </form>
-</form>
-    </div>
-  );
-}
+   
+  
 
 
 
