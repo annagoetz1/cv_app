@@ -2,9 +2,15 @@ import React, { useState } from "react";
 
 
 function App() {
-  // State for form values
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [education, setEducation] = useState("");
+  const [company, setCompany] = useState("");
+  const [position, setPosition] = useState("");
+  const [responsibilities, setResponsibilities] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
 
   // State to toggle between Edit and Display mode
   const [isEditing, setIsEditing] = useState(true);
@@ -33,10 +39,10 @@ function App() {
   <label htmlFor="name">Name:</label>
   <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required />
+  <label htmlFor="email">Email:</label>
+  <input type="email" id="email" value={email} onChange={(e => setEmail(e.target.value))} required />
 
-  <label for="education">Education Level:</label>
+  <label htmlFor="education">Education Level:</label>
   <select id="education" name="education" required>
     <option value="">--Please select--</option>
     <option value="high_school">High School</option>
