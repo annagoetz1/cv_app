@@ -1,16 +1,35 @@
 import React, { useState } from "react";
 
-function appInput ({})
 
 function App() {
+  // State for form values
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  // State to toggle between Edit and Display mode
+  const [isEditing, setIsEditing] = useState(true);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsEditing(false); // Switch to view mode
+  };
+
+  const handleEdit = () => {
+    setIsEditing(true); // Switch to edit mode
+  };
+
+
   return (
 <div className="App">
 
     <h1>
       CV Application
     </h1>
-    <form>
 
+
+    {isEditing ? (
+        // EDIT MODE
+        <form onSubmit={handleSubmit}>
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" required />
 
