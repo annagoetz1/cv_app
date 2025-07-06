@@ -30,8 +30,8 @@ function App() {
     {isEditing ? (
         // EDIT MODE
         <form onSubmit={handleSubmit}>
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required />
+  <label htmlFor="name">Name:</label>
+  <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
 
   <label for="email">Email:</label>
   <input type="email" id="email" name="email" required />
