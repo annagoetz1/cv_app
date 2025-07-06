@@ -117,7 +117,24 @@ function App() {
   <button type="submit">Send</button>
 </form>
    
-  
+  ) : (
+    <div>
+      <h2>Submitted Info</h2>
+      <p><strong>Name:</strong> {name}</p>
+      <p><strong>Email:</strong> {email}</p>
+      <p><strong>Education:</strong> {education}</p>
+      <h3>Work Experience</h3>
+      <p><strong>Company:</strong> {company}</p>
+      <p><strong>Position:</strong> {position}</p>
+      <p><strong>Responsibilities:</strong> {responsibilities}</p>
+      <p><strong>From:</strong> {startDate}</p>
+      <p><strong>To:</strong> {endDate || "Present"}</p>
+      <button onClick={handleEdit}>Edit</button>
+    </div>
+  )}
+</div>
+);
+}
 
 
 
