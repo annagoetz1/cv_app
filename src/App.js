@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+function appInput ({})
 
 function App() {
   return (
@@ -10,7 +11,6 @@ function App() {
     </h1>
     <form>
 
-    <form action="/submit-form" method="POST">
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" required />
 
@@ -61,5 +61,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;
