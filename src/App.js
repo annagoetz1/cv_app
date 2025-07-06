@@ -43,15 +43,20 @@ function App() {
   <input type="email" id="email" value={email} onChange={(e => setEmail(e.target.value))} required />
 
   <label htmlFor="education">Education Level:</label>
-  <select id="education" name="education" required>
-    <option value="">--Please select--</option>
-    <option value="high_school">High School</option>
-    <option value="associate">Associate's Degree</option>
-    <option value="bachelor">Bachelor's Degree</option>
-    <option value="master">Master's Degree</option>
-    <option value="doctoral">Doctoral Degree (PhD, etc.)</option>
-    <option value="other">Other</option>
-  </select>
+          <select
+            id="education"
+            value={education}
+            onChange={(e) => setEducation(e.target.value)}
+            required
+          >
+            <option value="">--Please select--</option>
+            <option value="high_school">High School</option>
+            <option value="associate">Associate's Degree</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="doctoral">Doctoral Degree (PhD, etc.)</option>
+            <option value="other">Other</option>
+          </select>
 
     <legend>Work Experience</legend>
 
